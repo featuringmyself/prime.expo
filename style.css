@@ -554,7 +554,7 @@ ul li:nth-child(4) {
     background: linear-gradient(to top right, #ff2d03, #ff5c0b);
     /* background: linear-gradient(to top right,red,blue); */
 
-
+    z-index: 1;
     top: 58%;
     left: 25%;
     filter: blur(20px);
@@ -637,8 +637,8 @@ ul li:nth-child(4) {
     border-radius: 15px;
     position: fixed;
     z-index: 99;
-    left: 50%;
-    top: 25%;
+    left: 30%;
+    top: 20%;
     display: none;
     background-size: cover;
     background-position: center;
@@ -657,10 +657,13 @@ ul li:nth-child(4) {
 }
 
 .swiper-slide {
-    width: 20%;
+    width: 30%;
     border-left: 1px solid #aeadad;
     padding: 0 2vw;
     position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
 }
 .swiper-slide h1{
     position: absolute;
@@ -673,6 +676,7 @@ ul li:nth-child(4) {
 }
 .swiper-slide img{
     width: 100%;
+    height: fit-content;
     object-fit: cover;
     filter: brightness(50%);
 }
@@ -737,13 +741,17 @@ ul li:nth-child(4) {
 }
 
 @media (max-width:600px) {
-
+    #cursor{
+        display: none;
+    }
+    #blur-cursor{
+        display: none;
+    }
     #page1 {
         min-height: 100vh;
         width: 100vw;
         padding: 0 0vw;
     }
-
     nav {
         padding: 8vw 5vw;
         background-color: #EFEAE3;
@@ -752,7 +760,7 @@ ul li:nth-child(4) {
 
     nav img {
         transition: all ease 0.2s;
-        height: 9vh;
+        width: 25vw;
     }
 
     #nav-part2 {
@@ -769,6 +777,9 @@ ul li:nth-child(4) {
         padding-left: 10vw;
     }
 
+    #left h3 span{
+        font-size: 6vw;
+    }
     #center {
         height: 62vh;
         width: 100%;
@@ -800,7 +811,7 @@ ul li:nth-child(4) {
         position: relative;
         border-radius: 15px;
         margin-top: 4vw;
-        height: 70vh;
+        width: 40vh;
         object-fit: cover;
         object-position: center;
         width: 92%;
@@ -814,7 +825,27 @@ ul li:nth-child(4) {
         padding: 8vw 0;
         position: relative;
     }
-
+    #expo-cities{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #expo-cities img{
+        height: 50vw;
+    }
+    #expo-cities h1{
+        font-size: 6vw;
+    }
+    #expo-cities h4{
+        font-size: 8vw;
+    }
+    #expo-cities h3{
+        font-size: 4vw;
+    }
+    #expo-cities h2{
+        font-size: 4vw;
+        margin-bottom: 10vw;
+    }
     #moving-text {
         overflow-x: auto;
         white-space: nowrap;
@@ -853,8 +884,8 @@ ul li:nth-child(4) {
         /* background-color: aliceblue; */
         padding: 10vw 4vw;
         display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: space-evenly;
         position: relative;
         flex-direction: column;
         z-index: 9;
@@ -877,26 +908,43 @@ ul li:nth-child(4) {
     }
 
     #page2 #gooey {
-        height: 62vw;
-        width: 62vw;
-        position: absolute;
-        border-radius: 50%;
-        background: linear-gradient(to top right, #ff2d03, #ff5c0b);
-        /* background: linear-gradient(to top right,red,blue); */
-
-
-        top: 58%;
-        left: 25%;
-        filter: blur(20px);
-        animation-name: gooey;
-        animation-duration: 6s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in-out;
-
+        display: none;
     }
-
-
+    .elem h2{
+        font-size: 6vw;
+    }
+    .elem .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        transition: all ease 0.25s;
+    }
+    
+    .elem:hover .overlay {
+        top: 0;
+    }
+    #fixed-image {
+        height: 60vw;
+        width: 49vw;
+        left: 50%;
+        top: 45%;
+     }
+    #more img{
+        width: 8vw;
+    }
+    #page4{
+        height: 30vh;
+    }
+    .swiper-slide{
+        width: 80%;
+        align-items: center;
+    }
+    .swiper-slide h1{
+        font-size: 4vw !important;
+    }
 }
 
 #loader{
